@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/ic4000msg_list_back" android:title="@string/ic4000msg_list_item1" android:orderInCategory="1"></item>
+    <item android:id="@+id/ic4000msg_list_clean" android:title="@string/ic4000msg_list_clean" android:orderInCategory="0"></item>
+    
+
+</menu>

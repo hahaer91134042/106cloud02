@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/Black"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp" >
+
+        <TextView
+            android:id="@+id/icTexVie4200"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/Lime" />
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/icEdiTex4201"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/White"
+        android:ems="10"
+        android:hint="請輸入要發送的訊息...." />
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom" >
+
+        <Button
+            android:id="@+id/icBtn4211"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/Blue"
+            android:text="單人發送"
+            android:textColor="@drawable/Lime" />
+
+        <Button
+            android:id="@+id/icBtn4212"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/Red"
+            android:text="更新名單" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/icBtn4213"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/Yellow"
+            android:text="全員發送"
+            android:textColor="@drawable/Maroon" />
+
+        <Button
+            android:id="@+id/icBtn4214"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/Fuchsia"
+            android:text="歷史訊息"
+            android:textColor="@drawable/Navy" />
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/icTexVie4201"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="成員名單:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@drawable/Lime" />
+
+    <ListView
+        android:id="@+id/icLisVie4220"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

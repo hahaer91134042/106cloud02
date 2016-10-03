@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="icBtn7001">登入</string>
+<string name="icBtn7002">註冊</string>
+<string name="icTex7001">帳號：</string>
+<string name="icTex7002">密碼：</string>
+<string name="icTex7003">電話：</string>
+<string name="icTex7004">電郵：</string>
+<string name="icGcm7101">開啟GCM</string>
+<string name="icLogOut7102">登出/登入系統</string>
+<string name="icEditCode7103">修改密碼</string>
+</resources>

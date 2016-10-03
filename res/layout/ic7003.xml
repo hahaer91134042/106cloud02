@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/icLay7003"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@raw/iclay7002"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:id="@+id/icTex7008"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="手機設定  "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/icBtn7004"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@raw/icbtn7004" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tableRow1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/icTex7009"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IP  CAM "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/icBtn7005"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="18dp"
+            android:background="@raw/icbtn7005" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tableRow2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/icTex7010"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提醒設定  "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/icBtn7006"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@raw/icbtn7006" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/icBtn7007"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tableRow3"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@raw/icbtn7007"
+        android:text="設定完成"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@drawable/Blue"
+        android:textSize="25dp" />
+
+</RelativeLayout>

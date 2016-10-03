@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="tcnr.com.ic7000.IC7000" >
+    <item android:id="@+id/iccareweb" android:title="官網"></item>
+    <item android:id="@+id/mail" android:title="聯絡我們"></item>
+    <item android:id="@+id/action_finish" android:title="@string/action_finish"></item>
+
+</menu>

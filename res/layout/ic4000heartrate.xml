@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/Black"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".IC4000heartrate" >
+
+    <Spinner
+        android:id="@+id/icSpi4101"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/White" />
+
+    <Spinner
+        android:id="@+id/icSpi4102"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/icSpi4101"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/Lime" />
+
+    <ListView
+        android:id="@+id/icLisVie4103"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/icSpi4102"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp">
+    </ListView>
+
+    <TextView
+        android:id="@+id/icTexVie4104"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/icLisVie4103"
+        android:layout_below="@+id/icSpi4102"
+        android:layout_marginTop="23dp"
+        android:text="資料"
+        android:textColor="@drawable/Aqua" />
+
+</RelativeLayout>

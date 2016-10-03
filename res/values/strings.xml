@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iCare愛卡兒</string>
+    <string name="action_settings">設定</string>
+    <string name="action_finish">結束</string>
+    
+    
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+   
+    
+   
+   
+   
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering">連接伺服器: (attempt %1$d/%2$d) 次</string>
+    <string name="server_registered">註冊伺服器成功!!</string>
+    <string name="server_unregistered">已取消伺服器註冊...</string>
+    <string name="server_register_error">已嘗試連接伺服器  %1$d次 註冊失敗!</string>
+    <string name="server_unregister_error">取消伺服器註冊失敗! (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    
+    	<string name="settings">設定</string>
+	
+	<string name="resolution_label">Resolution</string>
+	<string name="resolution_times"> x </string>
+	<string-array name="resolution_array">
+        <item>640x480</item>
+        <item>480x640</item>
+        <item>320x240</item>
+        <item>240x320</item>
+        <item>176x144</item>
+        <item>144x176</item>
+        <item>Custom</item>
+    </string-array>
+
+	<string name="ip_setting_label">Address</string>
+	<string name="port_setting_label">Port</string>
+	<string name="command_setting_label">Command</string>
+	
+	<string name="digits_increment">+</string>
+	<string name="digits_decrement">-</string>
+	<string name="address_dot">.</string>
+	<string name="port_80">80</string>
+	<string name="port_8080">8080</string>
+	<string name="port_80_with_explanation">80 (for Ai-ball)</string>
+	<string name="port_8080_with_explanation">8080 (for IP Webcam)</string>	
+	<string name="command_streaming">\?action=stream</string>
+	<string name="command_videofeed">videofeed</string>
+	<string name="command_streaming_with_explanation">\?action=stream (for Ai-ball)</string>
+	<string name="command_videofeed_with_explanation">videofeed (for IP Webcam)</string>
+	
+	<string name="settings_done">Done</string>
+	
+	<string name="title_disconnected">Disconnected</string>
+	<string name="title_connecting">Connecting&#8230;</string>
+	<string name="title_imageerror">Error on preparing images</string>
+
+</resources>

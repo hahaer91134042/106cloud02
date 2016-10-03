@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/icLay7004"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:id="@+id/icTex7008"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="位置追踨  "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/icBtn7008"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@raw/icbtn7008" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tableRow1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/icTex7009"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="監控畫面  "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/icBtn7009"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@raw/icbtn7009" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tableRow2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/icTex7010"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生理紀錄  "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/icBtn7010"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@raw/icbtn7010" />
+
+    </TableRow>
+
+</RelativeLayout>

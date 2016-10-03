@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/Black"
+    android:orientation="vertical"
+    tools:context=".IC4000track" >
+
+    <Spinner
+        android:id="@+id/icSpin4111track"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/White" />
+
+    <Button
+        android:id="@+id/icBtn4111track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/icSpin4111track"
+        android:background="@drawable/Aqua"
+        android:text="我的位置" />
+
+    <Button
+        android:id="@+id/icBtn4112trcak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/icBtn4111track"
+        android:layout_alignBottom="@+id/icBtn4111track"
+        android:layout_toRightOf="@+id/icBtn4111track"
+        android:background="@drawable/Fuchsia"
+        android:text="尾行模式"
+        android:textColor="@drawable/Lime" />
+
+    <Button
+        android:id="@+id/icBtn4113track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/icBtn4112trcak"
+        android:layout_alignBottom="@+id/icBtn4112trcak"
+        android:layout_toRightOf="@+id/icBtn4112trcak"
+        android:background="@drawable/Yellow"
+        android:text="尾行路線"
+        android:textColor="@drawable/Black" />
+
+    <Button
+        android:id="@+id/icBtn4114track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/icBtn4113track"
+        android:layout_alignBottom="@+id/icBtn4113track"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/icBtn4113track"
+        android:background="@drawable/Blue"
+        android:text="紀錄位置"
+        android:textColor="@drawable/Red" />
+
+    <Button
+        android:id="@+id/icBtn4115track"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/icBtn4111track"
+        android:background="@drawable/Lime"
+        android:text="開啟成員名單" />
+
+    <WebView
+        android:id="@+id/icWebVie4110track"
+        android:layout_width="match_parent"
+        android:layout_height="322dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/icBtn4115track" />
+
+</RelativeLayout>

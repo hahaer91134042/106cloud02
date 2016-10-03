@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/Black"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/icTexVie4230"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="歷史訊息:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@drawable/Lime" />
+
+    <ListView
+        android:id="@+id/ic4000LisVie4230"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

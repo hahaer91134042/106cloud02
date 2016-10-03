@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Google Maps JavaScript API v3 Example: Marker Animations</title>
+    
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&AIzaSyCm3c9jk1NFxyZQxHDCX6AIJ_aHieuxIRY&sensor=false"></script>
+    <script>
+    //讀取app中設置的參數
+          var latGps = AndroidFunction.getLat();
+          var lngGps = AndroidFunction.getLng();
+      var start=AndroidFunction.Getstart();
+      var end=AndroidFunction.Getend();
+      
+      //var start="24.179051,120.600610";
+      //var end="24.136829,120.685011";
+      //var jsonArray = AndroidFunction.getJsonArray();
+     // var sqlData=JSON.parse(jsonArray);
+
+      var myLocation = new google.maps.LatLng(latGps, lngGps); //
+      var myposition;
+      var marker;
+      var map;
+      var image = "img/c00.gif";
+      var userimg="chicken.jpg";//image變數
+      
+      //----------
+      var prev_infowindow=false;
+      var prev_marker=false;//清除前一個marker用
+      var lastmarker=false;
+      //-----------
+       function initialize() {
+ 
+        var mapOptions = {
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          center: myLocation           
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+                mapOptions);
+
+
+        showTargetMark();
+      }
+      function showTargetMark(){
+      
+          marker = new google.maps.Marker({
+          map:map,          
+          position:myLocation,//marker位置
+          animation: google.maps.Animation.BOUNCE,
+          icon: image //指定標示圖案為image
+        });
+        map.panTo(myLocation);
+        
+        prev_marker=marker;//用來清除開啟時載入的mark
+      
+      }
+          //<!--按下按鈕時再傳入的經度跟緯度地方標記上marker-->
+      function mark(lat, log){//標註座標函式
+       
+        var m = new google.maps.LatLng(lat, log);
+        marker = new google.maps.Marker({
+          map:map,
+      //  draggable:true,//可以拖曳icon
+          animation: google.maps.Animation.BOUNCE,
+          position: m,
+          icon: userimg //指定標示圖案為image
+        });
+      //---------清除前一個設定的marker-----------
+      
+         if(lastmarker){
+             lastmarker.setMap(null);
+            } 
+            lastmarker=marker;         
+      //---------------------------------------
+      }
+
+      function myPosition (myLat,myLng) {
+      	 myposition=new google.maps.LatLng(myLat,myLng);
+      	//map.panTo(myposition);
+      	marker = new google.maps.Marker({
+          map:map,
+      //  draggable:true,//可以拖曳icon
+          animation: google.maps.Animation.BOUNCE,
+          position: myposition,
+          icon: image //指定標示圖案為image
+        });
+      //---------清除前一個設定的marker-----------
+      
+         if(prev_marker){
+             prev_marker.setMap(null);
+            } 
+            prev_marker=marker;          
+      //--------------------------------------- 
+      }
+      
+      function centerAt(latitude, longitude){//地圖以給予的座標為中心，即移動地圖至給定的座標
+        var myLatlng = new google.maps.LatLng(latitude,longitude);
+          map.panTo(myLatlng);//自動改變中心點
+      }
+      
+ function getNavon(navon){
+                   if(navon==1){
+                  RoutePlanning();
+                  }                                 
+                } 
+ var directionsDisplay;
+ var directionsService = new google.maps.DirectionsService();//路線資訊回傳
+ //var directionsService = new google.maps.DirectionsService();//路線資訊回傳
+function RoutePlanning() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+ 
+  directionsDisplay.setMap(map);
+
+  var request = {
+   origin : start,
+ //  waypoints : [{location:"24.1674900,120.6398902" },  中途點
+ //  {location:"24.144671,120.683981" },
+ //  {location:"台中市政府" }],
+   destination : end,
+   travelMode : google.maps.DirectionsTravelMode.DRIVING
+  };
+     //google.maps.TravelMode.DRIVING (預設) 表示使用道路網的標準行車路線。
+   //google.maps.TravelMode.BICYCLING 要求使用單車道及專用道路的單車路線。
+   //google.maps.TravelMode.TRANSIT 要求使用大眾運輸路線的導航。
+   //google.maps.TravelMode.WALKING 要求使用人行道與騎樓 的步行路線。
+
+  directionsService.route(request, function(response, status) {
+   if (status == google.maps.DirectionsStatus.OK) {
+    directionsDisplay.setDirections(response);
+   }
+  });
+ }   
+ 
+ function locusmark(YY,MM,DD,HH,Min,lat, lng){//標註座標函式
+       
+        var m = new google.maps.LatLng(lat, lng);
+        //var getDate=date;
+      var  marker = new google.maps.Marker({
+          map:map,
+      //  draggable:true,//可以拖曳icon
+       //   animation: google.maps.Animation.BOUNCE,
+          position: m,
+          icon: userimg //指定標示圖案為image
+        });
+        
+   var infowindow=new google.maps.InfoWindow({ //設定點擊到的時候彈出視窗
+                  //content:"<div>"+"MY FavorLove Chicken!!"+"</div>"//彈出視窗訊息
+                  content:"<div><img src='img/Banana2.gif'/>"+YY+"/"+MM+"/"+DD+"  "+HH+"時"+Min+"分</div><br>緯度:"+lat+"<br>經度:"+lng
+                  });
+                  google.maps.event.addListener(marker, 'click', function() {
+                                    //infowindow.close();
+                                    //myMarker.setMap(null);//消除marker
+                                    //---- infowindow.close() --清除已顯示內容----//
+                                    if( prev_infowindow ) {
+                                      prev_infowindow.close();
+                                      }
+                                      prev_infowindow = infowindow;
+                                     //--------------------------------------
+                                    infowindow.open(map,marker);                                                                   
+                                   
+                                    });
+
+      }
+  function pathWay(mylat,mylng,getlat,getlng){//地圖以給予的座標為中心，即移動地圖至給定的座標
+       var myLatlng=new google.maps.LatLng(mylat,mylng);
+       var  getLatlng = new google.maps.LatLng(getlat,getlng);
+          //gmap.panTo(getLatlng);
+         /* var myMarker = new google.maps.Marker({position : getLatlng, map : gmap, icon:trackimg});
+             //---------清除前一個設定的marker-----------
+                  if(prev_trackMarker){
+                  prev_trackMarker.setMap(null);
+                  }
+                  prev_trackMarker=myMarker;
+            //--------------------------------------- */
+         directionsDisplay.setMap(null);//清除重複的路徑
+         start=myLatlng; 
+         end=getLatlng;
+         RoutePlanning();
+         } 
+      
+      
+      
+ 
+  /* function showlocus(locus){
+                    if(locus==1){
+
+                  showAllMarkers();
+                  } 
+ }
+ 
+   function showAllMarkers(){
+      //var jsonArray = AndroidFunction.getJsonArray();
+      var sqlData=JSON.parse(jsonArray);            
+                 for (var j = 0; j < sqlData.length; j++){
+                 
+                    locusMarker(sqlData[j].date,sqlData[j].lat,sqlData[j].lng);                 
+                 
+                 }
+              
+                }
+ 
+  function locusMarker(date,lat,lng) {
+  
+             var myLatLng = new google.maps.LatLng(lat,lng); // 緯度, 經度
+             var myMarker = new google.maps.Marker({position : myLatLng, 
+                                              map : map,
+                                              icon:userimg
+                                                    });
+            // var getdate = date;                  
+              var infowindow=new google.maps.InfoWindow({ //設定點擊到的時候彈出視窗
+                  //content:"<div>"+"MY FavorLove Chicken!!"+"</div>"//彈出視窗訊息
+                  content:"<div><img src='img/Banana2.gif'/>"+date+"</div><br>緯度:"+lat+"<br>經度:"+lng
+                  });
+                  google.maps.event.addListener(myMarker, 'click', function() {
+                                    //infowindow.close();
+                                    //myMarker.setMap(null);//消除marker
+                                    //---- infowindow.close() --清除已顯示內容----//
+                                    if( prev_infowindow ) {
+                                      prev_infowindow.close();
+                                      }
+                                      prev_infowindow = infowindow;
+                                     //--------------------------------------
+                                    infowindow.open(map,myMarker);                                                                   
+                                   
+                                    });
+
+                    }*/
+
+    </script>
+</head>
+ <body onload="initialize()">
+    <div id="map_canvas" style="width: device-width; height: 380px;">map div</div>
+
+</body>
+</html>

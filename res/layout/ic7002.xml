@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iclay7002"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@raw/iclay7002"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tcnr.com.project_ic.IC7001" >
+
+    <Button
+        android:id="@+id/icBtn7003"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tableRow4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@raw/icbtn7003"
+        android:text="註冊"
+        android:textColor="@drawable/Black"
+        android:textSize="25dp" />
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/icBtn7002"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp" >
+
+        <TextView
+            android:id="@+id/icTex7001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/icTex7001"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/icEdt7003"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/Silver"
+            android:ems="10"
+            android:hint="請輸入帳號"
+            android:textColorHint="@drawable/White"
+            android:textSize="20dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tableRow1"
+        android:layout_below="@+id/tableRow1"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:id="@+id/icTex7002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/icTex7002"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/icEdt7004"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/Silver"
+            android:ems="10"
+            android:hint="請輸入密碼"
+            android:inputType="textPassword"
+            android:textColorHint="@drawable/White"
+            android:textSize="20dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tableRow3"
+        android:layout_below="@+id/tableRow3"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:id="@+id/icTex7005"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/icTex7004"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/icEdt7006"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/Silver"
+            android:ems="10"
+            android:hint="請輸入電子郵件"
+            android:textColorHint="@drawable/White"
+            android:textSize="20dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tableRow2"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:id="@+id/icTex7003"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/icTex7003"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/icEdt7005"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/Silver"
+            android:ems="10"
+            android:hint="請輸入手機號碼"
+            android:inputType="number"
+            android:textColorHint="@drawable/White"
+            android:textSize="20dp" />
+    </TableRow>
+
+</RelativeLayout>

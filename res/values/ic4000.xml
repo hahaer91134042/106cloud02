@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="icSpiArr4101">
+        <item>最新紀錄</item>
+        <item>歷史紀錄</item>
+    </string-array>
+    <string-array name="icSpiArr4102">
+        <item>三個月紀錄</item>
+        <item>一個月紀錄</item>
+        <item>一周紀錄</item>
+    </string-array>
+
+    <string name="ic4000searchItem">搜尋</string>
+    <string name="ic4000trackItem">追蹤</string>
+
+    <string-array name="icSpiArr4111track">
+        <item>即時追蹤</item>
+        <item>歷史軌跡</item>
+    </string-array>
+
+    <string name="ic4000queryItem">生理狀態</string>
+    <string name="ic4000msg_list_item1">返回</string>
+    <string name="ic4000msg_list_clean">清除歷史訊息</string>
+
+    <string-array name="mapType">
+        <item>街道圖</item>
+        <item>衛星圖</item>
+        <item>地形圖</item>
+        <item>混合圖</item>
+        <item>顯示路況</item>
+        <item>隱藏路況</item>
+    </string-array>
+    
+    <string-array name="dataType">
+        <item>請選擇資料..</item>
+        <item>各地天氣資料</item>
+        <item>附近醫院</item>
+        <item>Ubike</item>
+    </string-array>
+
+    <string name="ic4000opendataItem">icare資訊站</string>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="White">#FFFFFF</drawable>
+    <drawable name="Red">#FF0000</drawable>
+    <drawable name="Yellow">#FFFF00</drawable>
+    <drawable name="Black">#000000</drawable>
+    <drawable name="Blue">#0000FF</drawable>  
+    <drawable name="Silver">#C0C0C0</drawable>
+    <drawable name="Gray">#808080</drawable>
+    <drawable name="Maroon">#800000</drawable>
+    <drawable name="Olive">#808000</drawable>
+    <drawable name="Navy">#000080</drawable>
+    <drawable name="Lime">#00FF00</drawable>
+    <drawable name="Aqua">#00FFFF</drawable>
+    <drawable name="Teal">#008080</drawable>
+    <drawable name="Fuchsia">#FF00FF</drawable>
+    <drawable name="Purple">#800080</drawable>            
+
+</resources>

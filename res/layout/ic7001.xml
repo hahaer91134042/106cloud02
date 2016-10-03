@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/icLay7001"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@raw/iclay7001"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tcnr.com.project_ic.IC7001" >
+
+    <Button
+        android:id="@+id/icBtn7002"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/icBtn7001"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:background="@raw/icbtn7002"
+        android:text="註冊"
+        android:textColor="@drawable/Blue"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/icBtn7001"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/icBtn7002"
+        android:layout_alignLeft="@+id/icEdt7002"
+        android:layout_marginBottom="10dp"
+        android:background="@raw/icbtn7001"
+        android:text="登入"
+        android:textColor="@drawable/Yellow"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/icEdt7002"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/icBtn7001"
+        android:layout_alignLeft="@+id/icEdt7001"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/Silver"
+        android:ems="10"
+        android:hint="請輸入密碼"
+        android:inputType="textPassword"
+        android:textColorHint="@drawable/White"
+        android:textSize="25dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/icEdt7001"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/icEdt7002"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/Silver"
+        android:ems="10"
+        android:hint="請輸入帳號"
+        android:textColorHint="@drawable/White"
+        android:textSize="25dp" />
+
+</RelativeLayout>
